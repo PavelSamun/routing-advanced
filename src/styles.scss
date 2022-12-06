@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 992px;
+  margin: auto;
+  padding: 1em;
+  font-family: Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  display: block;
+  border: 1px solid darkred;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: darkred;
+    color: white;
+  }
+}
+
+nav {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  a {
+    display: block;
+    border: 1px solid darkred;
+    padding: 0.5em 1em;
+    border-radius: 7px;
+
+    &.active {
+      background-color: darkred;
+      color: white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darkblue;
+      color: white;
+    }
+  }
+}
+
+.phrases {
+  list-style: none;
+  padding: 0;
+
+  li {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px 0;
+    max-width: 250px;
+    border-radius: 7px;
+    transition: padding-left 0.25s;
+
+    &:hover {
+      background-color: lightcoral;
+      padding-left: 1em;
+    }
+
+    &.selected {
+      background-color: lightskyblue;
+      padding-left: 1em;
+      font-weight: bold;
+    }
+  }
+}
+
+.btn-group {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
