@@ -1,0 +1,26 @@
+<h2>Login</h2>
+
+<p>{{message}}</p>
+
+<div *ngIf="authService.isLoggedIn; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <div>
+    <button (click)="logout()" type="button">Logout</button>
+  </div>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div>
+    <label>Login <input [(ngModel)]="userLogin" type="text"></label>
+    <label>Password <input [(ngModel)]="userPassword" type="text"></label>
+  </div>
+
+  <div>
+    <button (click)="login()" type="button">Login</button>
+  </div>
+</ng-template>
+
+
+
+
