@@ -34,7 +34,7 @@ export class PhrasesListComponent {
   }
 
   onSelect(phrase: Phrase): void {
-    this.router.navigate(['phrase', phrase.id]).then();
+    this.router.navigate(['phrases', phrase.id]).then();
   }
 
   isSelected(phrase: Phrase): boolean {
