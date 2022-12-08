@@ -1,5 +1,7 @@
 <h3>Phrases List</h3>
 
+<p *ngIf="!phrases">Loading, please wait...</p>
+
 <ul class="phrases">
   <li (click)="onSelect(phrase)"
       *ngFor="let phrase of phrases"
